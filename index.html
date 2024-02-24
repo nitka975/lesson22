@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Drawing Program</h1>
+    <canvas id="imgCanvas" widht="600" height="400" onclick="draw(event)"></canvas>
 
+    <!-- <script src="script.js"></script> -->
+    <script>
+        function draw(event) {
+            let canvas = document.getElementById("imgCanvas");
+            let ctx = canvas.getContext("2d");
+            let rect = canvas.getBoundingClientRect();
+
+            let posX = event.clientX;
+            let posY = event.clientY;
+
+            // "#ff0000" = "#f00"
+            ctx.fillStyle = "#ff0000";
+
+            ctx.beginPath();
+
+            ctx.arc(posX, posY, 50, 0, 2 * Math.PI);
+
+            ctx.fill
+
+        }   
+    </script>
+</body>
+</html>
