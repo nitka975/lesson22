@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Drawing Program</h1>
-    <canvas id="imgCanvas" widht="600" height="400" onclick= draw(event)></canvas>
+    <canvas id="imgCanvas" widht="600" height="400" 
+    onclick= "draw(event)" style="background: rgb(224, 200, 200);"ы></canvas>
 
     <!-- <script src="script.js"></script> -->
     <script>
@@ -22,12 +23,16 @@
 
             // "#ff0000" = "#f00"
             ctx.fillStyle = "#ff0000";
+            ctx.strokeStyle = "#000";
+            // ctx.strokeStyle = "#000000";
 
             ctx.beginPath();
 
             ctx.arc(posX, posY, 50, 0, 2 * Math.PI);
 
             ctx.fill();
+            ctx.stroke();
+            // ctx.stroke():
 
         }   
     </script>
